@@ -10,11 +10,12 @@ def read_letters(file_name,c):
         letter = contents[i]
         output.append(caeser_cypher(letter, cypher))
         i += 1
-    return [i for i in output]
+    print(cypher)
+    return output
 def create_cypher(c):
     cypher = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
               "v", "w", "x", "y", "z"]
-
+    print(cypher)
     if c > 0:
         while c > 0:
             a = cypher.pop(0)
@@ -39,4 +40,6 @@ def caeser_cypher(letter, cypher):
         new_letter = letter
     return new_letter
 
-print(read_letters("letter.txt",1))
+print(read_letters("letter.txt",4))
+
+#
